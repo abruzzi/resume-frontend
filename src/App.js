@@ -6,6 +6,7 @@ import Skillset from './components/Skillset'
 import Experience from './components/Experience'
 
 class App extends Component {
+
   render() {
     return (
     <div className="resume-container">
