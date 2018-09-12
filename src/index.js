@@ -8,8 +8,8 @@ const employee = {
   "name": "Juntao Qiu",
   "title": "Web Developer / Designer",
   "bio": [
-    "",
-    ""
+    "Juntao Qiu is a senior Web application developer at ThoughtWorks. In the past ten years, he has been worked on a wild range of different types of Web applications, from traditional Web application with jQuery + JSP to SPAs with Backbone, Angular and React. He also is a technical author who has already had two books published: *JavaScript Core Concepts and Practices(2013)* and *Lightweight Web Application Development(2015)*.",
+    "Juntao has been worked on a lot of tech stacks like Java, Ruby, Node.js and has a real passion for Clean Code, Refactoring, Test Driven Development. Additionally, he practices Muay Thai and Boxing when he isn't coding."
   ],
   "skills": [
     {
@@ -19,7 +19,11 @@ const employee = {
     {
       "category": "Agile Project Management",
       "description": "Inception facilitation, Release Planning, Iteration Management"
-    }
+    },
+    {
+      "category": "Project Portfolio Management",
+      "description": "Value-based project prioritisation, Pipeline management, Resource planning, Delivery assurance"
+    },
   ],
   "experiences": [
     {
