@@ -6,7 +6,7 @@ const Basic = (props) => {
         <h2>{props.title}</h2>
         <section className="bio">
         {
-        	props.bio.map((desc, i) => (<p key={i}>{desc}</p>))
+          (Array.isArray(props.bio) ? props.bio : [props.bio]).map((desc, i) => (<p key={i}>{desc}</p>))
         }
         </section>
       </section>)

@@ -9,13 +9,13 @@ class ResumeContainer extends Component {
       employee: {
         bio: [],
         skills: [],
-        experiences: []
+        experience: []
       }
     }
   }
 
   componentDidMount () {
-    axios.get('/users/14323').then((res) => {
+    axios.get(`/users/${this.props.match.params.id}`).then((res) => {
       this.setState({
         employee: res.data
       })

@@ -27,12 +27,18 @@ const ResumeForm = () => {
           <form onSubmit={handleSubmit}>
             <div>
               <label>Name</label>
-              <Field name="name" component="input" />
+              <Field name="name" component="input" placeholder="Your name" />
             </div>
 
             <div>
               <label>Title</label>
-              <Field name="title" component="input" />
+              <Field name="title" component="input" placeholder="Your title" />
+            </div>
+
+
+            <div>
+              <label>Bio</label>
+              <Field name="bio" component="textarea" placeholder="Something about yourself"/>
             </div>
 
             <div className="buttons">

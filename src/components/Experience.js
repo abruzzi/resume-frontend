@@ -8,11 +8,11 @@ const Experience = (props) => {
         	<div className="project" key={i}>
 	          <h4>{exp.project}</h4>
 	          <p className="role">{exp.role}</p>
-				{
-					exp.description.map((desc, i) => (
-					<p className="description" key={i}>{desc}</p>
-					))
-				}
+            {
+              (Array.isArray(exp.description) ? exp.description : [exp.description]).map((desc, i) => (
+              <p className="description" key={i}>{desc}</p>
+              ))
+            }
 	        </div>))
     	}
       </section>)
