@@ -20,10 +20,10 @@ class ResumeListContainer extends Component {
   render () {
     return (
       <ul>
-        {this.state.resumes.map(resume => <li>
+        {this.state.resumes.map(resume => <li className="resume-item">
           <Link to={`/resume/${resume.id}`}>{resume.name}</Link>
         </li>)}
-        <li>
+        <li className="button-container">
           <Link className="button" to="/form">Create a new resume</Link>
         </li>
       </ul>

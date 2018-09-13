@@ -147,3 +147,20 @@ p.description {
 .resume-form .form-item {
 	margin: 10px 0;
 }
+
+.resume-item {
+	padding: 10px 20px;
+	border-radius: 4px;
+	background-color: white;
+	border: 1px solid #333;
+	margin: 10px 0;
+}
+
+.resume-item a {
+	text-decoration: underline;
+	color: #333;
+}
+
+.button-container {
+	margin: 20px 0;
+}
