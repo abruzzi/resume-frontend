@@ -12,13 +12,15 @@ class ResumeForm extends Component {
   }
 
   render() {
-    return (<div className="container">
+    return (<div className="container resume-form">
+      <h3>Tell me more about yourself</h3>
+
       <Form
         onSubmit={this.onSubmit}
         mutators={{
           ...arrayMutators
         }}
-        
+
         render={({
                    handleSubmit,
                    mutators: { push, pop }, // injected from final-form-arrays above
@@ -29,18 +31,18 @@ class ResumeForm extends Component {
                  }) => {
           return (
             <form onSubmit={handleSubmit}>
-              <div>
+              <div className="form-item">
                 <label>Name</label>
                 <Field name="name" component="input" placeholder="Your name" />
               </div>
 
-              <div>
+              <div className="form-item">
                 <label>Title</label>
                 <Field name="title" component="input" placeholder="Your title" />
               </div>
 
 
-              <div>
+              <div className="form-item">
                 <label>Bio</label>
                 <Field name="bio" component="textarea" placeholder="Something about yourself"/>
               </div>
@@ -58,7 +60,7 @@ class ResumeForm extends Component {
                   fields.map((name, index) => (
                     <div key={name}>
                       <label>Skills</label>
-                      <div>
+                      <div className="form-item">
                         <label>Category</label>
                         <Field
                           name={`${name}.category`}
@@ -67,7 +69,7 @@ class ResumeForm extends Component {
                         />
                       </div>
 
-                      <div>
+                      <div className="form-item">
                         <label>Description</label>
                         <Field
                           name={`${name}.description`}
@@ -98,7 +100,7 @@ class ResumeForm extends Component {
                   fields.map((name, index) => (
                     <div key={name}>
                       <label>Experience</label>
-                      <div>
+                      <div className="form-item">
                         <label>Project name</label>
                         <Field
                           name={`${name}.project`}
@@ -107,7 +109,7 @@ class ResumeForm extends Component {
                         />
                       </div>
 
-                      <div>
+                      <div className="form-item">
                         <label>Project name</label>
                         <Field
                           name={`${name}.role`}
@@ -116,7 +118,7 @@ class ResumeForm extends Component {
                         />
                       </div>
 
-                      <div>
+                      <div className="form-item">
                         <label>Description</label>
                         <Field
                           name={`${name}.description`}
