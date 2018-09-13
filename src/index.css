@@ -20,11 +20,14 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.resume-container {
+.main {
+	margin: 20px 0;
+}
+
+.container {
 	width: 780px;
 	margin: 0 auto;
 }
-
 
 .basic-information {
 	padding: 80px 0 40px 0;
@@ -103,4 +106,16 @@ h2 {
 p.description {
 	line-height: 1.6rem;
 	margin-bottom: 1rem;
+}
+
+.button {
+	padding: 10px 20px;
+	background: #20A95B;
+	color: white;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+.button:hover {
+	opacity: .9;
 }

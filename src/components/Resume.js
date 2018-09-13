@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
 
-import Basic from './components/Basic'
-import Skillset from './components/Skillset'
-import Experience from './components/Experience'
+import Basic from './Basic'
+import Skillset from './Skillset'
+import Experience from './Experience'
 
-class App extends Component {
+class Resume extends Component {
 
   render() {
     return (
-    <div className="resume-container">
+    <div className="container">
       <Basic {...this.props.employee} />
       <Skillset {...this.props.employee}/>
       <Experience {...this.props.employee} type="ThoughtWorks" />
@@ -22,4 +21,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Resume;

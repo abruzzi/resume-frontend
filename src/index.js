@@ -1,33 +1,31 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import axios from 'axios'
 
+import Home from './Home'
+import ResumeForm from './ResumeForm'
+import ResumeContainer from './ResumeContainer'
+
+import {
+  HashRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom'
 
 class AppWrapper extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      employee: {
-        bio: [],
-        skills: [],
-        experiences: []
-      }
-    }
-  }
-
-  componentDidMount () {
-    axios.get('/users/14323').then((res) => {
-      this.setState({
-        employee: res.data
-      })
-    })
-  }
-
   render() {
-    return (<App employee={this.state.employee} />)
+    return (
+    <div className="main">
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route path='/form' component={ResumeForm}/>
+        <Route path='/resume/:id' component={ResumeContainer}/>
+      </Switch>
+    </div>)
   }
 }
 
-ReactDOM.render(<AppWrapper />, document.getElementById('root'));
+ReactDOM.render(
+  <Router>
+    <AppWrapper />
+  </Router>, document.getElementById('root'));
