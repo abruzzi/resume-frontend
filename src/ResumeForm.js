@@ -13,7 +13,7 @@ class ResumeForm extends Component {
 
   render() {
     return (<div className="container resume-form">
-      <h3>Tell me more about yourself</h3>
+      <h3 className="page-title">Create a new resume</h3>
 
       <Form
         onSubmit={this.onSubmit}
@@ -31,6 +31,7 @@ class ResumeForm extends Component {
                  }) => {
           return (
             <form onSubmit={handleSubmit}>
+              <h3 className="title">Basic information</h3>
               <div className="form-item">
                 <label>Name</label>
                 <Field name="name" component="input" placeholder="Your name" />
@@ -46,6 +47,8 @@ class ResumeForm extends Component {
                 <label>Bio</label>
                 <Field name="bio" component="textarea" placeholder="Something about yourself"/>
               </div>
+
+              <h3 className="title">Skillset</h3>
 
               <div className="buttons">
                 <button
@@ -87,6 +90,8 @@ class ResumeForm extends Component {
                   ))}
               </FieldArray>
 
+              <h3 className="title">Experience</h3>
+
               <div className="buttons">
                 <button
                   type="button"
@@ -100,6 +105,14 @@ class ResumeForm extends Component {
                   fields.map((name, index) => (
                     <div key={name}>
                       <label>Experience</label>
+
+                      <div className="form-item">
+                        <label>
+                          <Field name={`${name}.current`} component="input" type="checkbox" />
+                          {' '} In ThoughtWorks
+                        </label>
+                      </div>
+
                       <div className="form-item">
                         <label>Project name</label>
                         <Field
@@ -110,11 +123,11 @@ class ResumeForm extends Component {
                       </div>
 
                       <div className="form-item">
-                        <label>Project name</label>
+                        <label>Role played</label>
                         <Field
                           name={`${name}.role`}
                           component="input"
-                          placeholder="Role you played"
+                          placeholder="Role played"
                         />
                       </div>
 
@@ -123,7 +136,7 @@ class ResumeForm extends Component {
                         <Field
                           name={`${name}.description`}
                           component="textarea"
-                          placeholder="Role you played"
+                          placeholder="More details"
                         />
                       </div>
 

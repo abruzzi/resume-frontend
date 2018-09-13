@@ -144,6 +144,10 @@ p.description {
 	opacity: .5;
 }
 
+.resume-form input[type=checkbox] {
+	width: auto;
+}
+
 .resume-form .form-item {
 	margin: 10px 0;
 }
@@ -163,4 +167,15 @@ p.description {
 
 .button-container {
 	margin: 20px 0;
+}
+
+h3.title {
+	font-weight: 600;
+}
+
+h3.page-title {
+	font-weight: 700;
+	font-size: 24px;
+	padding: 20px 0;
+	text-transform: capitalize;
 }

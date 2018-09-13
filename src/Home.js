@@ -3,7 +3,7 @@ import ResumeListContainer from './ResumeListContainer'
 
 const Home = () => {
   return (<div className="container">
-    <h3>Resumes</h3>
+    <h3 className="page-title">Resumes</h3>
     <ResumeListContainer />
   </div>)
 }
