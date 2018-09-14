@@ -19,6 +19,7 @@ class AppWrapper extends Component {
       <Switch>
         <Route exact path='/' component={Home}/>
         <Route path='/form' component={ResumeForm}/>
+        <Route path='/edit/:id' component={ResumeForm}/>
         <Route path='/resume/:id' component={ResumeContainer}/>
       </Switch>
     </div>)

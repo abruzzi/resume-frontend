@@ -6,9 +6,35 @@ import axios from 'axios'
 
 class ResumeForm extends Component {
   onSubmit = values => {
-    axios.post('/users', values).then((res) => {
-      this.props.history.push('/')
-    })
+    const id = this.props.match.params.id
+    if(id) {
+      axios.put(`/users/${id}`, values).then((res) => {
+        this.props.history.push('/')
+      })
+    } else {
+      axios.post('/users', values).then((res) => {
+        this.props.history.push('/')
+      })
+    }
+  }
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      resume: {}
+    }
+  }
+
+  componentDidMount() {
+    const id = this.props.match.params.id
+
+    if(id) {
+      axios.get(`/users/${id}`).then(res => {
+        this.setState({
+          resume: res.data
+        })
+      })
+    }
   }
 
   render() {
@@ -20,7 +46,7 @@ class ResumeForm extends Component {
         mutators={{
           ...arrayMutators
         }}
-
+        initialValues={this.state.resume}
         render={({
                    handleSubmit,
                    mutators: { push, pop }, // injected from final-form-arrays above
