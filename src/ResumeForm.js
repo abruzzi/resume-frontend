@@ -180,6 +180,7 @@ class ResumeForm extends Component {
                   Submit
                 </button>
                 <button
+                  className="reset"
                   type="button"
                   onClick={reset}
                   disabled={submitting || pristine}>
